@@ -1,4 +1,5 @@
 import Header from '../../components/Header';
+import HightLight from '../../components/Highlight';
 import MovieRow from '../../components/MovieRow';
 
 import { Movie } from '../../domain/Movie';
@@ -19,6 +20,7 @@ export default function Home({ movies }: MovieProps) {
   return (
     <>
       <Header />
+      <HightLight movie={movies.action[2]} />
       <MovieRow movies={movies.horror} genre="Horror" />
       <MovieRow movies={movies.documentary} genre="Documentary" />
       <MovieRow movies={movies.action} genre="Action" />

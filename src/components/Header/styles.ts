@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  border-bottom: 1px 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: ${({ theme }) => theme.colors.dark};
+  z-index: 100;
 `;
 
 export const Content = styled.div`
@@ -10,12 +15,14 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 2rem;
 
   nav ul {
     display: flex;
   }
 
   nav ul li {
-    padding: 1rem;
+    padding: 2rem;
+    cursor: pointer;
   }
 `;
